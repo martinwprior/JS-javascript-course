@@ -13,9 +13,7 @@ function logger() {
     console.log('My name is Martin');
 }
 logger();  // calling running or invoking function
-logger();
 
-logger(); logger(); logger(); logger();
 function fruitProcessor(apples, oranges) {
     console.log(apples, oranges);
     const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
@@ -76,7 +74,7 @@ function fruitProcessor(apples, oranges) {
 
 console.log(fruitProcessor(2, 1));
 
-*/
+
 
 function doughWeight(flour, hydration) {
     const salt = (2 / 100) * flour;
@@ -87,3 +85,46 @@ function doughWeight(flour, hydration) {
 }
 
 console.log(doughWeight(1000, 67));
+
+const calcAverage = (score_1, score_2, score_3) => {
+    const averageScore = Math.floor((score_1 + score_2 + score_3) / 3);
+    return averageScore;
+
+}
+
+//console.log(calcAverage(12, 34, 71));
+
+const avgDolphins = (calcAverage(44, 23, 71));
+console.log(avgDolphins);
+
+const avgKoalas = (calcAverage(65, 54, 49));
+console.log(avgKoalas);
+
+const checkWinner = (avgDolphins, avgKoalas) => {
+    let winningScore = 0;
+    if (avgDolphins > avgKoalas * 2) {
+        winningScore = avgDolphins - avgKoalas;
+        console.log("Dolphins wins " + avgDolphins + " by " + winningScore);
+
+    } else if ((avgKoalas) >= (avgDolphins * 2)) {
+        winningScore = avgKoalas - avgDolphins;
+        console.log("Koalas wins " + avgKoalas + " by " + winningScore);
+    } else {
+        console.log("no team wins");
+        return 0;
+    }
+}
+
+checkWinner(avgDolphins, avgKoalas);\*/
+
+
+function calcTip(bill) {
+    if (bill >= 50 || bill <= 300) {
+        return (0.15 * bill);
+    } else {
+        return (0.20 * bill);
+    }
+}
+
+calcTip(56);
+
